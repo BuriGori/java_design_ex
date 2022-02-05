@@ -1,13 +1,13 @@
-package com.example.java_design_ex.StrategeyPattern;
+package com.example.java_design_ex.strategeypattern;
 
-public class lambdaStrategy {
-    public enum Strategy implements playStrategy{
+public class LambdaStrategy {
+    public enum Strategy implements PlayStrategy {
         FWPlayer(()-> System.out.println("make a goal!!")),
         MFPlayer(()-> System.out.println("take a pass!!")),
         DFPlayer(()-> System.out.println("prepare other player"));
 
-        private final playStrategy strategy;
-        Strategy(playStrategy strategy) {
+        private final PlayStrategy strategy;
+        Strategy(PlayStrategy strategy) {
             this.strategy = strategy;
         }
         @Override
